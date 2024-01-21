@@ -2,8 +2,8 @@ name: Issue Labeller
 on:
    issues:
      types:
-      -reopened
-      -opened
+      -reopen
+      -open
 jobs:
    labelling_issues:
      runs-on: ubuntu-latest
