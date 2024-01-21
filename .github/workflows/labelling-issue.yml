@@ -1,0 +1,17 @@
+name: Issue Labeller
+on:
+   issues:
+     types:
+      -reopened
+      -opened
+jobs:
+   labelling_issues:
+     runs-on: ubuntu-latest
+     permissions:
+          issues: write
+     steps:
+       - name: Issue Labeller
+         uses: andymckay/labeler@1.0.4
+         with:
+          add-labels: "triage"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
